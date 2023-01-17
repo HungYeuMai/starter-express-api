@@ -4,6 +4,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const bodyParser = require("body-parser");
+app.use(bodyParser.json());
 app.all('/test', (req, res) => {
     console.log("Just got a request!")
     res.send('Yo!')
