@@ -4,10 +4,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const bodyParser = require("body-parser");
-// app.all('/', (req, res) => {
-//     console.log("Just got a request!")
-//     res.send('Yo!')
-// })
+app.all('/test', (req, res) => {
+    console.log("Just got a request!")
+    res.send('Yo!')
+})
 app.post('/',(req,res)=>{
     console.log('====================================');
     console.log(req.body, req.params, req.query);
